@@ -6,8 +6,13 @@ namespace Madlib
     {
         static void Main()
         {
+            // Madlip in ASCII 'broadway' font
             MadLipOpeningScreen.MadLipDisplayinRed();
+
+            // "We need  some input" in ASCII font 
             InputScreen.InputDisplay();
+
+            // Game
             MadLipContent.runMadLip();
    
         }
