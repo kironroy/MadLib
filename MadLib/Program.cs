@@ -1,5 +1,6 @@
 ﻿using System;
 
+// http://programmingisfun.com/simple-csharp-madlib-part-one/
 
 namespace Madlib
 {
