@@ -13,7 +13,7 @@ namespace Madlib
             InputScreen.InputDisplay();
 
             // Game
-            MadLipContent.runMadLip();
+            MainGame.madlibRun();
    
         }
     }
