@@ -15,7 +15,7 @@ namespace Madlib
 
                 Console.Title = "ASCII Art";
                 Console.WriteLine(); // breakline
-                string titleBlue =
+                string titleRed =
                      @"
                                        
                            
@@ -33,7 +33,7 @@ namespace Madlib
 
                ";
 
-                Console.WriteLine(titleBlue);
+                MainGame.typeWritter(titleRed);
                 Console.WriteLine(); // breakline
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 CenterText.centerText("Press enter to continue...");

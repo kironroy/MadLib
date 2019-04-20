@@ -14,6 +14,9 @@ namespace Madlib
 
             // Game
             MainGame.madlibRun();
+
+            // End Title
+            EndingGameScene.EndTitle();
    
         }
     }

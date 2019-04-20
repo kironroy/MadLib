@@ -12,17 +12,12 @@ namespace Madlib
             Console.WriteLine(); // breakline
             string titleBlue =
                  @"
-                                       
-                           
-
                                             ╦ ╦┌─┐  ┌┐┌┌─┐┌─┐┌┬┐  ┌─┐┌─┐┌┬┐┌─┐  ┬┌┐┌┌─┐┬ ┬┌┬┐
                                             ║║║├┤   │││├┤ ├┤  ││  └─┐│ ││││├┤   ││││├─┘│ │ │ 
                                             ╚╩╝└─┘  ┘└┘└─┘└─┘─┴┘  └─┘└─┘┴ ┴└─┘  ┴┘└┘┴  └─┘ ┴ 
-     
+                 ";
 
-               ";
-
-            Console.WriteLine(titleBlue);
+            MainGame.typeWritter(titleBlue);
             Console.WriteLine(); // breakline
             Console.ForegroundColor = ConsoleColor.Yellow;
             //CenterText.centerText("Press enter to continue...");
