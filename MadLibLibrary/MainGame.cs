@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 // http://programmingisfun.com/simple-csharp-madlib-part-one/
 
@@ -6,24 +7,23 @@ namespace Madlib
 {
     public class MainGame
     {
-        static string[] wordsDefault = new string[] { "creature", "luminous", "ghastly", "spectral", "countryman", "farrier", "farmer", "dreadful", "apparition", "hound" };
-        static string[] promptsUserFor = new string[] { "noun", "adjective", "adjective", "adjective", "occupation", "occupation", "occupation", "adjective", "noun", "noun" };
-        static string usersStory;
+        List<string> wordsDefault = new List<string> { "creature", "luminous", "ghastly", "spectral", "countryman", "farrier", "farmer", "dreadful", "apparition", "hound" };
+        List<string> promptsUserFor = new List<string> { "noun", "adjective", "adjective", "adjective", "occupation", "occupation", "occupation", "adjective", "noun", "noun" };
+        string usersStory;
 
-        public static void madlibRun() // main function to run story!
+        public void madlibRun() // main function to run story
         {
-            getWords();
-            writeStory();
+            GetWords();
+            WriteStory();
             
         }
 
-        static void getWords()
+        public void GetWords()
         {
             // ask player to enter words
-            for (int i = 0; i < wordsDefault.Length; i++)
+            for (int i = 0; i < wordsDefault.Count; i++)
             {
-                typeWritter($"Please enter a/an {promptsUserFor[i]}" + ": ");
-                //Console.Write($"Please enter a/an {promptsUserFor[i]}" + ": ");
+                TypeWritter($"Please enter a/an {promptsUserFor[i]}" + ": ");
                 wordsDefault[i] = Console.ReadLine();
             }
 
@@ -31,10 +31,7 @@ namespace Madlib
             Console.Clear();
         }
 
-
-        
-
-        public static void typeWritter(string message)
+        public void TypeWritter(string message)
         {
             for (int i = 0; i < message.Length; i++)
             {
@@ -45,19 +42,20 @@ namespace Madlib
 
         }
 
-
-
-
-
-        static void writeStory()
+        public void WriteStory()
         {
-
 
             //write out story
             Console.WriteLine();
-            usersStory = $"They all agreed that it was a huge {wordsDefault[0]}, {wordsDefault[1]}, {wordsDefault[2]}, and {wordsDefault[3]}.\nI have cross-examined these men, one of them a hard-headed {wordsDefault[4]},\none a {wordsDefault[5]}, and one a moorland {wordsDefault[6]}, who all tell the same story\nof this {wordsDefault[7]} {wordsDefault[8]}, exactly corresponding to the {wordsDefault[9]} of the legend.";
-            //Console.WriteLine(usersStory, wordsDefault[0], wordsDefault[1], wordsDefault[2], wordsDefault[3], wordsDefault[4], wordsDefault[5], wordsDefault[6], wordsDefault[7], wordsDefault[8], wordsDefault[9]);
-            typeWritter(usersStory);
+
+            usersStory = $"They all agreed that it was a huge {wordsDefault[0]}, {wordsDefault[1]}, {wordsDefault[2]}, " +
+                $"and {wordsDefault[3]}.\n" +
+                $"I have cross-examined these men, one of them a hard-headed {wordsDefault[4]},\none a {wordsDefault[5]}, " +
+                $"and one a moorland {wordsDefault[6]}, " +
+                $"who all tell the same story\nof this {wordsDefault[7]} {wordsDefault[8]}, " +
+                $"exactly corresponding to the {wordsDefault[9]} of the legend.";
+
+            TypeWritter(usersStory);
             Console.WriteLine(); // breakline
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine(); // breakline
@@ -65,8 +63,16 @@ namespace Madlib
             
         }
 
-
-
-
-    } // class ends
+    } 
 }
+
+
+
+        
+
+
+
+
+
+
+

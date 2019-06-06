@@ -12,8 +12,9 @@ namespace Madlib
             // "We need  some input" in ASCII font 
             InputScreen.InputDisplay();
 
-            // Game
-            MainGame.madlibRun();
+            // init Game
+            MainGame mainGame = new MainGame();
+            mainGame.madlibRun();
 
             // End Title
             EndingGameScene.EndTitle();

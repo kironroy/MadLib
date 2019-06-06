@@ -27,7 +27,8 @@ namespace Madlib
                                                         ╚═╝     ╚═╝╚═╝  ╚═══╝
                 ";
 
-            MainGame.typeWritter(endTitle);
+            MainGame mainGame = new MainGame();
+            mainGame.TypeWritter(endTitle);
             Console.ReadKey();
             Console.Clear();
 

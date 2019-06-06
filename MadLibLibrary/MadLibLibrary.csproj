@@ -44,7 +44,8 @@
     <Compile Include="ASCII_Screens\EndTitle.cs" />
     <Compile Include="ASCII_Screens\InputScreen.cs" />
     <Compile Include="ASCII_Screens\MadLipOpeningScreen.cs" />
-    <Compile Include="CenterText.cs" />
+    <Compile Include="ConsoleFormatting\CenterText.cs" />
+    <Compile Include="ConsoleFormatting\ConsoleHelpers.cs" />
     <Compile Include="MainGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

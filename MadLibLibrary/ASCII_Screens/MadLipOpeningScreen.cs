@@ -33,7 +33,8 @@ namespace Madlib
 
                ";
 
-                MainGame.typeWritter(titleRed);
+            MainGame mainGame = new MainGame();
+            mainGame.TypeWritter(titleRed);
                 Console.WriteLine(); // breakline
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 CenterText.centerText("Press enter to continue...");
